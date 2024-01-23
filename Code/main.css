@@ -3,7 +3,7 @@
 #Post{
     color: #72886D;
     font-family: "Pangolin";
-    font-size: 3vw;
+    font-size: 2.5vw;
     display: flex;
     justify-content: center;
     align-content: flex-start;
@@ -44,7 +44,7 @@ header, footer{
 .links>a{
     text-decoration: none;
     color: #648F63;
-    font-size: 1vw;
+    font-size: 0.9vw;
 }
 footer{
     padding: 0 20px;
@@ -108,6 +108,12 @@ figure>figcaption{
     width: 70%;
     align-self: normal;
 }
+#start>hr{
+    width: 80vw;
+    border: 0.5vw solid #648F63;
+    background-color: #648F63;
+    display: none;
+}
 #whatis{
     padding: 2%;
 }
@@ -120,12 +126,12 @@ figure>figcaption{
     padding: 2%;
     
 }
-.art_new>.cont{
+#new>.cont{
     text-align: end;
     padding-right: 3%;
     padding-top: 5%;
 }
-.art_new{
+#new{
     display: flex;
     justify-content: space-between;
 }
@@ -143,8 +149,27 @@ figure>figcaption{
         flex-direction: column;
         text-align: center;
     }
+    .start_video{
+        padding-right: 0;
+        padding-left: 3%;
+    }
+    #new>.cont{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        padding-right: 0;
+    }
+    .links>a, .up_text>a{
+        font-size: 1.2vw;
+    }
+    #Post{
+        font-size: 3vw;
+    }
 }
-@media (max-width: 1331px) {
+@media (max-width: 1340px) {
+    body{
+        overflow-x: hidden;
+    }
     #start>.cont>img{
         display: none;
     }
@@ -154,20 +179,24 @@ figure>figcaption{
     .pos_fix>.links{
         justify-content: center;
     }
-    #start, .art_new>.cont, #whatis>p, #whatis{
+    #start, #whatis>p, #whatis{
         justify-content: center;
         flex-direction: column;
         text-align: center;
     }
-    .art_new>.cont{
+    #new>.cont{
         padding: 0 1vw;
     }
     .start_video, #start>.cont>h2, .art>figure>img, .foto>figure>img, #whatis>p, #whatis{
         width: 100%;
     }
+    #whatis{
+        margin-left: 0;
+        padding-left: 0;
+    }
     .links{
         width: 70%;
-        padding-right: 0;
+        padding: 0 0;
     }
     .links>a{
         padding: 0 2%;
@@ -186,5 +215,12 @@ figure>figcaption{
     }
     article>h1,.cont>h1{
         font-size: 2.5vw;
+    }
+    #start>hr{
+        display:inline;
+    }
+    .start_video{
+        padding-right: 2%;
+        padding-left: 0;
     }
 }
